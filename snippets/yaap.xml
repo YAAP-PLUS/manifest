@@ -11,15 +11,19 @@
            fetch="https://github.com/yaap"
            revision="refs/heads/sixteen" />
 
+  <remote  name="yaap-plus"
+           fetch="https://github.com/yaap-plus"
+           revision="refs/heads/sixteen" />
+
   <!-- General -->
   <project path="art" name="art" remote="yaap" />
   <project path="bootable/deprecated-ota" name="bootable_deprecated-ota" remote="yaap" />
-  <project path="bootable/recovery" name="bootable_recovery" remote="yaap" />
+  <project path="bootable/recovery" name="bootable_recovery" remote="yaap-plus" />
   <project path="bionic" name="bionic" remote="yaap" />
   <project path="manifest" name="manifest" remote="yaap" />
 
   <!-- Build -->
-  <project path="build/make" name="build_make" remote="yaap" >
+  <project path="build/make" name="build_make" remote="yaap-plus" >
    <copyfile src="core/root.mk" dest="Makefile" />
    <linkfile src="CleanSpec.mk" dest="build/CleanSpec.mk" />
    <linkfile src="buildspec.mk.default" dest="build/buildspec.mk.default" />
@@ -160,7 +164,7 @@
   <project path="packages/apps/FMRadio" name="packages_apps_FMRadio" remote="yaap" />
   <project path="packages/apps/Gallery2" name="packages_apps_Gallery2" remote="yaap" />
   <project path="packages/apps/KProfiles" name="packages_apps_KProfiles" remote="yaap" />
-  <project path="packages/apps/Launcher3" name="packages_apps_Launcher3" remote="yaap" />
+  <project path="packages/apps/Launcher3" name="packages_apps_Launcher3" remote="yaap-plus" />
   <project path="packages/apps/Matlog" name="packages_apps_Matlog" remote="yaap" />
   <project path="packages/apps/Messaging" name="packages_apps_Messaging" remote="yaap" />
   <project path="packages/apps/OpenDelta" name="packages_apps_OpenDelta" remote="yaap" />
@@ -230,7 +234,7 @@
   <project path="vendor/google/pixel" name="yaosp/vendor_google_pixel" remote="gitlab" revision="sixteen" clone-depth="1" />
   <project path="vendor/microg" name="vendor_microg" remote="yaap" />
   <project path="vendor/themes" name="vendor_themes" remote="yaap" />
-  <project path="vendor/yaap" name="vendor_yaap" remote="yaap" />
+  <project path="vendor/yaap" name="vendor_yaap" remote="yaap-plus" />
   <project path="vendor/yaap/apps" name="vendor_yaap_apps" remote="yaap" clone-depth="1" />
 
 </manifest>
